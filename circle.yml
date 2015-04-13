@@ -8,12 +8,12 @@ dependencies:
   override:
     - docker info
     - if [ -e ~/docker/image.tar ]; then docker load --input ~/docker/image.tar; fi
-    - docker build -t cgswong/curator .
-    - mkdir -p ~/docker; docker save cgswong/curator > ~/docker/image.tar
+    - docker build -t cgswong/curator:latest .
+    - mkdir -p ~/docker; docker save cgswong/curator:latest > ~/docker/image.tar
 
 test:
   override:
-    - docker run -d cgswong/curator --help; sleep 10
+    - docker run cgswong/curator:latest --help; sleep 10
 
 deployment:
   hub:
