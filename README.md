@@ -1,20 +1,15 @@
-# Curator in docker
+# Elasticsearch Curator in docker
 
-This is dockerized version of elasticsearch curator,
-tool to manage time-based indices.
+This is a Dockerized version of [Elasticsearch Curator](https://github.com/elastic/curator), which is a tool to manage Elasticsearch indices.
 
 ## Why this image
 
-This image keeps up to date with curator releases and has tags
-in the docker registry. It is also based on minimal `alpine` image,
-resulting in just 50mb image.
+This image uses the latest Curator release and is based on the minimal `alpine` image.
 
 ## Usage
 
-Image entrypoint is set to curator script, so just run the image:
+Image `ENTRYPOINT` is set to the curator script, so just run the image:
 
+```sh
+docker run --rm cgswong/curator --help
 ```
-docker run --rm bobrik/curator:3.0.3 --help
-```
-
-Pick whatever version you need.
