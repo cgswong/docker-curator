@@ -1,5 +1,7 @@
 # Elasticsearch Curator in docker
 
+[![Circle CI](https://circleci.com/gh/cgswong/docker-curator/tree/master.svg?style=svg)](https://circleci.com/gh/cgswong/docker-curator/tree/master)
+
 This is a Dockerized version of [Elasticsearch Curator](https://github.com/elastic/curator), which is a tool to manage Elasticsearch indices.
 
 ## Why this image
