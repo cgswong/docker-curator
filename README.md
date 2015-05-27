@@ -13,5 +13,5 @@ This image uses the latest Curator release and is based on the minimal `alpine` 
 Image `ENTRYPOINT` is set to the curator script, so just run the image:
 
 ```sh
-docker run --rm cgswong/curator --help
+docker run --rm cgswong/curator:latest --help
 ```
