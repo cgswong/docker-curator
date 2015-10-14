@@ -1,1 +1,0 @@
-Elasticsearch Curator for managing ES indices (~50 MB)
