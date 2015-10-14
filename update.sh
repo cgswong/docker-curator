@@ -31,7 +31,7 @@ versions=( $(printf '%s\n' "${versions[@]}"|sort -V) )
 dlVersions=$(curl -sSL 'https://github.com/elastic/curator/releases' | sed -rn 's!.*/elastic/curator/archive/v([0-9]+\.[0-9]+\.[0-9]).*!\1!gp' | sort -V | uniq)
 for version in "${versions[@]}"; do
   echo "${yellow}Updating version: ${version}${reset}"
-  cp docker-entrypoint.sh "${version}/"
+#  cp docker-entrypoint.sh "${version}/"
   sed -e 's/%%VERSION%%/'"$version"'/' < Dockerfile.tpl > "$version/Dockerfile"
 	if ! grep "  - VERSION=$version" .travis.yml &>/dev/null ; then
 		travisEnv='\n  - VERSION='"$version$travisEnv"
