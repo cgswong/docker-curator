@@ -5,7 +5,7 @@
 pkg=${0##*/}
 pkg_path=$(cd $(dirname $0); pwd -P)
 
-DOCKER_IMAGE=${1:-"jenkins"} ; export DOCKER_IMAGE
+DOCKER_IMAGE=${1:-"curator"} ; export DOCKER_IMAGE
 DOCKER_MACHINE_NAME=${2:-"citest"} ; export DOCKER_MACHINE_NAME
 DOCKER_MACHINE_HDD=${DOCKER_MACHINE_HDD:-"10240"} export DOCKER_MACHINE_HDD
 
@@ -21,7 +21,7 @@ reset=$(tput sgr0)
 
 versions=( "$@" )
 if [ ${#versions[@]} -eq 0 ]; then
-  versions=( 1.* )
+  versions=( ?.?.? )
 fi
 versions=( "${versions[@]%/}" )
 versions=( $(printf '%s\n' "${versions[@]}"|sort -V) )
