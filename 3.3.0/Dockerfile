@@ -1,12 +1,10 @@
-# ################################################################
-# DESC: Docker file to run Elasticsearch Curator.
-# ################################################################
-FROM alpine:latest
+# Docker file to run Elasticsearch Curator.
+FROM gliderlabs/alpine:3.3
 MAINTAINER Stuart Wong <cgs.wong@gmail.com>
 
 ENV CURATOR_VERSION 3.3.0
 
-RUN apk --update add \
+RUN apk --no-cache add \
       python \
       py-pip &&\
     pip install --upgrade pip &&\
