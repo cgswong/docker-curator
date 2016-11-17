@@ -2,7 +2,7 @@
 FROM gliderlabs/alpine:3.4
 MAINTAINER Stuart Wong <cgs.wong@gmail.com>
 
-ENV CURATOR_VERSION %%VERSION%%
+ENV CURATOR_VERSION 4.2.1
 
 RUN apk --no-cache add \
       python \
